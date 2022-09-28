@@ -57,7 +57,7 @@ const createUser = async function (req, res) {
     if (isUniqueEmail)
       return res
         .status(400)
-        .send({ status: false, message: "Provided email is already registered" });
+        .send({ status: false, message: "Provided email is already registered" }); 
 
     if (!password || !isValidPassword(password))
       return res.status(400).send({
